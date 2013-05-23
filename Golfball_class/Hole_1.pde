@@ -6,7 +6,5 @@ void setup(){
 void draw(){
   background(255);
 golfball.shoot();
-
 golfball.display();
-golfball.move();
 }
