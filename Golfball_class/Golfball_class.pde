@@ -18,8 +18,13 @@ class GolfBall {
       x+=xspeed;
       y+=yspeed;
     }
-//    xspeed=speed*COS(angle);
-//    yspeed=speed*SIN(angle);
   }
+  void shoot() {
+    strokeWeight(5);
+    stroke(200,100,100,150);
+    line(x, y, mouseX, mouseY);
+    stroke(0);
+  strokeWeight(1);
 }
+  }
 

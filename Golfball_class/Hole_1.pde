@@ -4,7 +4,9 @@ void setup(){
   golfball = new GolfBall(200,height/2);
 }
 void draw(){
-  background(0);
+  background(255);
+golfball.shoot();
+
 golfball.display();
 golfball.move();
 }
