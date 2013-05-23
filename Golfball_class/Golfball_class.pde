@@ -7,6 +7,8 @@ class GolfBall {
   float diam;
   float xspeed;
   float yspeed;
+  float xspeed0;
+  float yspeed0;
 
   GolfBall(float tx, float ty) {
     x=tx;
@@ -25,23 +27,26 @@ class GolfBall {
     strokeWeight(1);
     if (keyPressed) {
       if (key=='a' && !released) {
-
+        xspeed=xspeed0;
+        yspeed=yspeed0;
         released = true;
         releaseX = mouseX;
         releaseY = mouseY;
       }
     }
     if (!released) {
-      xspeed= (mouseX-x)/20;
-      yspeed= (mouseY-y)/20;
+      xspeed0= (mouseX-x)/20;
+      yspeed0= (mouseY-y)/20;
     }
     else {
-      xspeed= (releaseX-x)/20;
-      yspeed= (releaseY-y)/20;
+      xspeed0= (releaseX-x)/20;
+      yspeed0= (releaseY-y)/20;
       x+=xspeed;
       y+=yspeed;
+      xspeed-=.5;
+      if (xspeed<=0) {
+        xspeed=0;
+      }
     }
-    System.out.println(releaseX + ", " + releaseY);
   }
 }
-
