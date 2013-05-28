@@ -6,11 +6,12 @@ class Hole1 {
   Hole1() {
     holex=800;
     holey=400;
-    holediam=20;
+    holediam=15;
   }
   void display() {
     fill(0);
     ellipse(holex, holey, holediam, holediam);
+    fill(255);
   }
 
   boolean checkhole(GolfBall g) {
