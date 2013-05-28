@@ -1,6 +1,13 @@
 GolfBall golfball;
 Hole1 Hole1;
 Hole2 Hole2;
+Hole3 Hole3;
+Hole4 Hole4;
+Hole5 Hole5;
+Hole6 Hole6;
+Hole7 Hole7;
+Hole8 Hole8;
+Hole9 Hole9;
 float level;
 void setup() {
   size(1000, 800);
@@ -8,6 +15,14 @@ void setup() {
   golfball = new GolfBall(200, height/2);
   Hole1 = new Hole1();
   Hole2 = new Hole2();
+  Hole3 = new Hole3();
+  Hole4 = new Hole4();
+  Hole5 = new Hole5();
+  Hole6 = new Hole6();
+  Hole7 = new Hole7();
+  Hole8 = new Hole8();
+  Hole9 = new Hole9();
+
 }
 void draw() {
   background(255);
