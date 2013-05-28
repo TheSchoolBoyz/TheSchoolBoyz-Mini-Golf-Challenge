@@ -28,8 +28,6 @@ class GolfBall {
     y+=yspeed;
     xspeed*=accelerate;
     yspeed*=accelerate;
-    
   }
-  
- 
 }
+
