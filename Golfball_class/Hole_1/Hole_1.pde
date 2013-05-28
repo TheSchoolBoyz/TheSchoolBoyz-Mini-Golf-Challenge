@@ -26,8 +26,6 @@ void setup() {
 }
 void draw() {
   background(255);
-  golfball.shoot();
-  golfball.display();
   if(level == 1){
    Hole1.display();
   }
@@ -81,8 +79,10 @@ void draw() {
   }
   if(Hole9.checkhole(golfball)==true){
     background(0);
-    print(ln);
+    println("youwin");
   }
+  golfball.shoot();
+  golfball.display();
 }
 
 void mouseReleased () {
