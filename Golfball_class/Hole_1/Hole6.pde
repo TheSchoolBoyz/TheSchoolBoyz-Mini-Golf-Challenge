@@ -2,6 +2,7 @@ class Hole6 {
   float holex;
   float holey;
   float holediam;
+  int holescore;
 
   Hole6() {
     holex=800;
