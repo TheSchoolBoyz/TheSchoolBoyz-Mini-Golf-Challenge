@@ -5,7 +5,7 @@ class Hole4 {
 
   Hole4() {
     holex=800;
-    holey=800;
+    holey=400;
     holediam=15;
   }
   void display() {
