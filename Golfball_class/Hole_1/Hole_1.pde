@@ -50,107 +50,116 @@ void draw() {
     Hole1.checkwalls(golfball);
     golfball.shoot();
     golfball.display();
+    if (Hole1.checkhole(golfball)==true) {
+      level++;
+      Hole1.holescore = strokes2;
+      strokes2 = 0;
+    }
   }
-  if (Hole1.checkhole(golfball)==true) {
-    level++;
-    Hole1.holescore = strokes2;
-    strokes2 = 0;
-  }
+
   if (level == 2) {
     Hole2.display();
     golfball.shoot();
     golfball.display();
+    if (Hole2.checkhole(golfball)==true) {
+      level++;
+      Hole2.holescore = strokes2;
+      strokes2 = 0;
+    }
   }
-  if (Hole2.checkhole(golfball)==true) {
-    level++;
-    Hole2.holescore = strokes2;
-    strokes2 = 0;
-  }
+
   if (level == 3) {
     Hole3.display();
     golfball.shoot();
     golfball.display();
+    if (Hole3.checkhole(golfball)==true) {
+      level++;
+      Hole3.holescore = strokes2;
+      strokes2 = 0;
+    }
   }
-  if (Hole3.checkhole(golfball)==true) {
-    level++;
-    Hole3.holescore = strokes2;
-    strokes2 = 0;
-  }
+
   if (level == 4) {
     Hole4.display();
     golfball.shoot();
     golfball.display();
+    if (Hole4.checkhole(golfball)==true) {
+      level++;
+      Hole4.holescore = strokes2;
+      strokes2 = 0;
+    }
   }
-  if (Hole4.checkhole(golfball)==true) {
-    level++;
-    Hole4.holescore = strokes2;
-    strokes2 = 0;
-  }
+
   if (level == 5) {
     Hole5.display();
     golfball.shoot();
     golfball.display();
+    if (Hole5.checkhole(golfball)==true) {
+      level++;
+      Hole5.holescore = strokes2;
+      strokes2 = 0;
+    }
   }
-  if (Hole5.checkhole(golfball)==true) {
-    level++;
-    Hole5.holescore = strokes2;
-    strokes2 = 0;
-  }
+
   if (level == 6) {
     Hole6.display();
     golfball.shoot();
     golfball.display();
+    if (Hole6.checkhole(golfball)==true) {
+      level++;
+      Hole6.holescore = strokes2;
+      strokes2 = 0;
+    }
   }
-  if (Hole6.checkhole(golfball)==true) {
-    level++;
-    Hole6.holescore = strokes2;
-    strokes2 = 0;
-  }
+
   if (level == 7) {
     Hole7.display();
     golfball.shoot();
     golfball.display();
+    if (Hole7.checkhole(golfball)==true) {
+      level++;
+      Hole7.holescore = strokes2;
+      strokes2 = 0;
+    }
   }
-  if (Hole7.checkhole(golfball)==true) {
-    level++;
-    Hole7.holescore = strokes2;
-    strokes2 = 0;
-  }
+
   if (level == 8) {
     Hole8.display();
     golfball.shoot();
     golfball.display();
+    if (Hole8.checkhole(golfball)==true) {
+      level++;
+      Hole8.holescore = strokes2;
+      strokes2 = 0;
+    }
   }
-  if (Hole8.checkhole(golfball)==true) {
-    level++;
-    Hole8.holescore = strokes2;
-    strokes2 = 0;
-  }
+
   if (level == 9) {
     Hole9.display();
     golfball.shoot();
     golfball.display();
+    if (Hole9.checkhole(golfball)==true) {
+      level++;
+      Hole9.holescore = strokes2;
+      strokes2 = 0;
+    }
   }
-  if (Hole9.checkhole(golfball)==true) {
-    level++;
-    Hole9.holescore = strokes2;
-    strokes2 = 0;
-  }
+
   if (level == 10) {
     textSize(50);
     text("You win", 400, 300);
     text("Your score is: " + strokes, 400, 400);
-    text("Hole # 1 2 3 4 5 6 7 8 9",200,500);
-    text("Par p1 p2 p3 p4 p5 p6 p7 p8 p9",200,600);
-    text("Your Score:" + Hole1.holescore + " " + Hole2.holescore + " " + Hole3.holescore + " " + Hole4.holescore + " " + Hole5.holescore + " " + Hole6.holescore + " " + Hole7.holescore + " " + Hole8.holescore + " " +Hole9.holescore,200,700);
+    text("Hole # 1 2 3 4 5 6 7 8 9", 200, 500);
+    text("Par p1 p2 p3 p4 p5 p6 p7 p8 p9", 200, 600);
+    text("Your Score:" + Hole1.holescore + " " + Hole2.holescore + " " + Hole3.holescore + " " + Hole4.holescore + " " + Hole5.holescore + " " + Hole6.holescore + " " + Hole7.holescore + " " + Hole8.holescore + " " +Hole9.holescore, 200, 700);
     textSize(0);
   }
-    textSize(30);
-    fill(0);
-    text("Total Score: " + strokes, 50, 50);
-    text("Hole Score: " + strokes2, 300, 50);
-    textSize(1);
-    stroke(255);
+  textSize(30);
+  fill(0);
+  text("Total Score: " + strokes, 50, 50);
+  text("Hole Score: " + strokes2, 300, 50);
+  textSize(1);
+  stroke(255);
 }
 
 void mouseReleased () {
