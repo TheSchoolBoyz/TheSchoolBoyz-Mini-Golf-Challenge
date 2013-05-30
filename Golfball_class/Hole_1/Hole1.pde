@@ -5,12 +5,16 @@ class Hole1 {
   int holescore;
   float y1;
   float y2;
-  float y12speed = 5;
-
+  float y1speed;
+  float y2speed;
   Hole1() {
     holex=840;
     holey=200;
     holediam=15;
+    y1=200;
+    y2=400;
+    y1speed=3;
+    y2speed=3;
   }
   void display() {
     fill(0);
@@ -32,21 +36,20 @@ class Hole1 {
     fill(0);
     ellipse(holex, holey, holediam, holediam);
     fill(255);
-    y1=200;
-    y2=500;
-      y1+=y12speed;
-      y2+=y12speed;
+   
+      y1+=y1speed;
+      y2+=y2speed;
       if(y1>=500){
-        y12speed=-y12speed;
+        y1speed=-y1speed;
       }
       if(y1<=200){
-        y12speed=-y12speed;
+        y1speed=-y1speed;
       }
-      if(y2>=500){
-        y12speed=-y12speed;
+      if(y2<=400){
+        y2speed=-y2speed;
       }
       if(y2>=600){
-        y12speed=-y12speed;
+        y2speed=-y2speed;
       }
     }
       
@@ -64,16 +67,16 @@ class Hole1 {
     if(g.x>100 && g.x<900 && g.y>=700-g.diam/2-15/2){
       g.yspeed=-g.yspeed;
     }
-    if(g.y>100 && g.y<420 && g.x<=400+g.diam/2+15/2&&g.x>=400-g.diam/2-15/2){
+    if(g.y>100 && g.y<y1 && g.x<=400+g.diam/2+15/2&&g.x>=400-g.diam/2-15/2){
       g.xspeed=-g.xspeed;
     }
-    if(g.y>500 && g.y<700 && g.x<=400+g.diam/2+15/2&&g.x>=400-g.diam/2-15/2){
+    if(g.y>y1+100 && g.y<700 && g.x<=400+g.diam/2+15/2&&g.x>=400-g.diam/2-15/2){
       g.xspeed=-g.xspeed;
     }
-    if(g.y>100 && g.y<330 && g.x<=700+g.diam/2+15/2&&g.x>=700-g.diam/2-15/2){
+    if(g.y>100 && g.y<y2 && g.x<=700+g.diam/2+15/2&&g.x>=700-g.diam/2-15/2){
       g.xspeed=-g.xspeed;
     }
-    if(g.y>410 && g.y<700 && g.x<=700+g.diam/2+15/2&&g.x>=700-g.diam/2-15/2){
+    if(g.y>y2+100 && g.y<700 && g.x<=700+g.diam/2+15/2&&g.x>=700-g.diam/2-15/2){
       g.xspeed=-g.xspeed;
     }
   }
