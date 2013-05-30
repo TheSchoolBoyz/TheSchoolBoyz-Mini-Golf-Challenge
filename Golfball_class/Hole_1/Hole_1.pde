@@ -27,6 +27,7 @@ void keyPressed() {
 }
 
 void setup() {
+  frameRate(100000000);
   size(1000, 800);
   golfball = new GolfBall(200, height/2);
   Startscreen = new Startscreen();
@@ -47,6 +48,7 @@ void draw() {
   }
   if (level == 1) {
     Hole1.display();
+    Hole1.checkwalls(golfball);
     golfball.shoot();
     golfball.display();
   }
@@ -137,10 +139,11 @@ void draw() {
   }
   if (level == 10) {
     textSize(50);
-    text("You win", 400, 400);
-    text("Your score is: " + strokes, 400, 500);
-    text("1 2 3 4 5 6 7 8 9",300,600);
-    text(Hole1.holescore + " " + Hole2.holescore + " " + Hole3.holescore + " " + Hole4.holescore + " " + Hole5.holescore + " " + Hole6.holescore + " " + Hole7.holescore + " " + Hole8.holescore + " " +Hole9.holescore,300,700);
+    text("You win", 400, 300);
+    text("Your score is: " + strokes, 400, 400);
+    text("Hole # 1 2 3 4 5 6 7 8 9",200,500);
+    text("Par p1 p2 p3 p4 p5 p6 p7 p8 p9",200,600);
+    text("Your Score:" + Hole1.holescore + " " + Hole2.holescore + " " + Hole3.holescore + " " + Hole4.holescore + " " + Hole5.holescore + " " + Hole6.holescore + " " + Hole7.holescore + " " + Hole8.holescore + " " +Hole9.holescore,200,700);
     textSize(0);
   }
     textSize(30);
