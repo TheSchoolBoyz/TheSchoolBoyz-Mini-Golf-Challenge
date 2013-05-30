@@ -27,7 +27,6 @@ void keyPressed() {
 }
 
 void setup() {
-  frameRate(100000000);
   size(1000, 800);
   golfball = new GolfBall(200, height/2);
   Startscreen = new Startscreen();
