@@ -14,7 +14,7 @@ class Hole1 {
     y1=200;
     y2=400;
     y1speed=3;
-    y2speed=3;
+    y2speed=6;
   }
   void display() {
     fill(0);
@@ -39,13 +39,13 @@ class Hole1 {
    
       y1+=y1speed;
       y2+=y2speed;
-      if(y1>=500){
+      if(y1>=600){
         y1speed=-y1speed;
       }
-      if(y1<=200){
+      if(y1<=100){
         y1speed=-y1speed;
       }
-      if(y2<=400){
+      if(y2<=100){
         y2speed=-y2speed;
       }
       if(y2>=600){
