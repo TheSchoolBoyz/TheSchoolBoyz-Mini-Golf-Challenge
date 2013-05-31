@@ -1,5 +1,6 @@
 GolfBall golfball;
 Startscreen Startscreen;
+Endscreen Endscreen;
 Hole1 Hole1;
 Hole2 Hole2;
 Hole3 Hole3;
@@ -30,6 +31,7 @@ void setup() {
   size(1000, 800);
   golfball = new GolfBall(200, height/2);
   Startscreen = new Startscreen();
+  Endscreen = new Endscreen();
   Hole1 = new Hole1();
   Hole2 = new Hole2();
   Hole3 = new Hole3();
@@ -147,11 +149,12 @@ void draw() {
 
   if (level == 10) {
     textSize(50);
+    Endscreen.display();
     text("You win", 400, 300);
     text("Your score is: " + strokes, 400, 400);
-    text("Hole # 1 2 3 4 5 6 7 8 9", 200, 500);
-    text("Par p1 p2 p3 p4 p5 p6 p7 p8 p9", 200, 600);
-    text("Your Score:" + Hole1.holescore + " " + Hole2.holescore + " " + Hole3.holescore + " " + Hole4.holescore + " " + Hole5.holescore + " " + Hole6.holescore + " " + Hole7.holescore + " " + Hole8.holescore + " " +Hole9.holescore, 200, 700);
+    text("Hole     1  2  3  4  5  6  7  8  9", 125, 500);
+    text("Par       1  2  3  4  5  6  7  8  9", 125, 600);
+    text("Score    " + Hole1.holescore + "  " + Hole2.holescore + "  " + Hole3.holescore + "  " + Hole4.holescore + "  " + Hole5.holescore + "  " + Hole6.holescore + "  " + Hole7.holescore + "  " + Hole8.holescore + "  " +Hole9.holescore, 125, 700);
     textSize(0);
   }
   textSize(30);
