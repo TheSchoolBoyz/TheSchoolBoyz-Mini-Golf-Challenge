@@ -10,6 +10,7 @@ Hole6 Hole6;
 Hole7 Hole7;
 Hole8 Hole8;
 Hole9 Hole9;
+int par = 3;
 float level = 10;
 int strokes = 0;
 int strokes2 = 0;
@@ -148,10 +149,22 @@ void draw() {
   }
 
   if (level == 10) {
-    textSize(50);
+    textSize(100);
     Endscreen.display();
-    text("You win", 400, 300);
-    text("Your score is: " + strokes, 400, 400);
+    text("You Win!!", 250, 200);
+    textSize(50);
+    text("Your Score is: ",275,400);
+    if(strokes<par){
+      fill(#29ED30);
+    }
+    if(strokes==par){
+      fill(0);
+    }
+    if(strokes>par){
+      fill(255,0,0);
+    }
+    text((strokes-par), 625, 400);
+    fill(0);
     text("Hole     1  2  3  4  5  6  7  8  9", 125, 500);
     text("Par       1  2  3  4  5  6  7  8  9", 125, 600);
     text("Score    " + Hole1.holescore + "  " + Hole2.holescore + "  " + Hole3.holescore + "  " + Hole4.holescore + "  " + Hole5.holescore + "  " + Hole6.holescore + "  " + Hole7.holescore + "  " + Hole8.holescore + "  " +Hole9.holescore, 125, 700);
