@@ -11,7 +11,7 @@ Hole7 Hole7;
 Hole8 Hole8;
 Hole9 Hole9;
 int par = 3;
-float level = 0;
+float level = 2;
 int strokes = 0;
 int strokes2 = 0;
 void mousePressed() {
@@ -184,4 +184,3 @@ void mouseReleased () {
   golfball.xspeed=px;
   golfball.yspeed=py;
 }
-
