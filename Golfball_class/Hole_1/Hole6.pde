@@ -12,7 +12,13 @@ class Hole6 {
   void display() {
     fill(0);
     fill(37, 134, 44);
-    rect(100, 300, 800, 600);
+    noStroke();
+    rect(150, 350, 100, 250);
+    rect(750, 400, 100, 275);
+    rect(250, 550, 500, 200);
+    fill(255);
+    rect(250,600,100,200);
+    rect(700, 550, 50, 50);
     fill(255);
     strokeWeight(15);
     stroke(90, 54, 26);

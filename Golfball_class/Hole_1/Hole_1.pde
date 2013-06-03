@@ -11,7 +11,7 @@ Hole7 Hole7;
 Hole8 Hole8;
 Hole9 Hole9;
 int par = 3;
-int level = 6;
+int level = 8;
 int strokes = 0;
 int strokes2 = 0;
 void mousePressed() {
