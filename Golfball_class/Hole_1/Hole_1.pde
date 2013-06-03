@@ -11,7 +11,7 @@ Hole7 Hole7;
 Hole8 Hole8;
 Hole9 Hole9;
 int par = 3;
-float level = 4;
+int level = 6;
 int strokes = 0;
 int strokes2 = 0;
 void mousePressed() {
@@ -116,7 +116,7 @@ void draw() {
   }
 
   if (level == 7) {
-    Hole7.display();
+    Hole7.display(golfball);
     golfball.shoot();
     golfball.display();
     if (Hole7.checkhole(golfball)==true) {
@@ -172,6 +172,7 @@ void draw() {
   }
   textSize(30);
   fill(0);
+  text("Hole # " + level, 600, 50);
   text("Total Score: " + strokes, 50, 50);
   text("Hole Score: " + strokes2, 300, 50);
   textSize(1);
