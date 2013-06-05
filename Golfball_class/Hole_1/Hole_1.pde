@@ -12,6 +12,7 @@ Hole8 Hole8;
 Hole9 Hole9;
 int par = 3;
 int level = 4;
+
 int strokes = 0;
 int strokes2 = 0;
 void mousePressed() {
@@ -151,6 +152,7 @@ void draw() {
   if (level == 10) {
     textSize(100);
     Endscreen.display();
+    stop();
     text("You Win!!", 250, 200);
     textSize(50);
     text("Your Score is: ",275,400);
