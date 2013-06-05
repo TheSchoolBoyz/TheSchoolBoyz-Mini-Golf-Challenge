@@ -5,25 +5,25 @@ class Hole4 {
   int holescore;
 
   Hole4() {
-    holex=850;
-    holey=50;
+    holex=800;
+    holey=200;
     holediam=15;
   }
   void display(GolfBall g) {
     fill(0);
     fill(37, 134, 44);
     noStroke();
-    rect(150, 350, 800, 100);
-    rect(750,25,200,350);
+    rect(100, 500, 800, 100);
+    rect(700,175,200,350);
     fill(255);
     strokeWeight(15);
     stroke(90, 54, 26);
-    line(150, 350, 150, 450);
-    line(150, 450, 950, 450);
-    line(950, 450, 950, 25);
-    line(950, 25, 750, 25);
-    line(750, 25, 750, 350);
-    line(750, 350, 150, 350);
+    line(100, 500, 100, 600);
+    line(100, 600, 900, 600);
+    line(900, 600, 900, 175);
+    line(900, 175, 700, 175);
+    line(700, 175, 700, 500);
+    line(700, 500, 100, 500);
     stroke(0);
     strokeWeight(1);
     fill(0);
