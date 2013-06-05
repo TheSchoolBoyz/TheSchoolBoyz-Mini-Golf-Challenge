@@ -5,8 +5,8 @@ class Hole8 {
   int holescore;
 
   Hole8() {
-    holex=900;
-    holey=700;
+    holex=800;
+    holey=200;
     holediam=15;
   }
   void display() {
