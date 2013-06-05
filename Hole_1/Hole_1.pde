@@ -11,7 +11,7 @@ Hole7 Hole7;
 Hole8 Hole8;
 Hole9 Hole9;
 int par = 3;
-int level = 4;
+int level = 9;
 int strokes = 0;
 int strokes2 = 0;
 void mousePressed() {
@@ -157,14 +157,16 @@ void draw() {
     text("Your Score is: ",275,400);
     if(strokes<par){
       fill(#29ED30);
+      text((strokes-par), 625, 400);
     }
     if(strokes==par){
       fill(0);
+      text("0", 625,400);
     }
     if(strokes>par){
       fill(255,0,0);
+      text("+" + (strokes-par), 625, 400);
     }
-    text((strokes-par), 625, 400);
     fill(0);
     text("Hole     1  2  3  4  5  6  7  8  9", 125, 500);
     text("Par       1  2  3  4  5  6  7  8  9", 125, 600);
