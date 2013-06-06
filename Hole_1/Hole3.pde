@@ -74,6 +74,12 @@ class Hole3 {
      if(g.x>=700-g.diam/2 -15/2 && g.x<=750+15/2 + g.diam/2 && g.y>300 && g.y<500){
       g.xspeed=-g.xspeed;
     }
+    if(g.x>100 && g.x<600 && g.y>=300-g.diam/2-15/2 && g.y<=500+g.diam/2+15/2){
+      g.yspeed=-g.yspeed;
+    }
+   if(g.x<=600+15/2 + g.diam/2 && g.y>300 && g.y<500){
+      g.xspeed=-g.xspeed;
+    }
   }
 
   boolean checkhole(GolfBall g) {
