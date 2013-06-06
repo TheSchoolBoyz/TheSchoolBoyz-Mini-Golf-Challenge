@@ -11,7 +11,7 @@ Hole7 Hole7;
 Hole8 Hole8;
 Hole9 Hole9;
 int par = 3;
-int level = 3;
+int level = 4;
 int strokes = 0;
 int strokes2 = 0;
 void mousePressed() {
@@ -88,6 +88,7 @@ void draw() {
     Hole4.display(golfball);
     golfball.shoot();
     golfball.display();
+    Hole4.checkwalls(golfball);
     if (Hole4.checkhole(golfball)==true) {
       level++;
       Hole4.holescore = strokes2;

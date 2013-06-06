@@ -14,7 +14,7 @@ class Hole4 {
     fill(37, 134, 44);
     noStroke();
     rect(100, 500, 800, 100);
-    rect(700,175,200,350);
+    rect(700, 175, 200, 350);
     fill(255);
     strokeWeight(15);
     stroke(90, 54, 26);
@@ -29,6 +29,17 @@ class Hole4 {
     fill(0);
     ellipse(holex, holey, holediam, holediam);
     fill(255);
+  }
+  void checkwalls (GolfBall g) {
+    if (g.x<=100+g.diam/2+15/2 && g.y>500 && g.y<600) {
+      g.xspeed=-g.xspeed;
+    }
+    if (g.y<=500+g.diam/2+15/2 && g.x>100 && g.x<700) {
+      g.yspeed=-g.yspeed;
+    }
+    if (g.y>=600-g.diam/2-15/2 && g.x>100 && g.x<900) {
+      g.yspeed=-g.yspeed;
+    }
   }
 
   boolean checkhole(GolfBall g) {
