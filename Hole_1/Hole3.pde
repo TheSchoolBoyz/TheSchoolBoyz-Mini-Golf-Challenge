@@ -42,6 +42,7 @@ class Hole3 {
   void checkwalls(GolfBall g){
     if(g.y>100 && g.y<700 && g.x<=100+g.diam/2+15/2){
       g.xspeed=-g.xspeed;
+      g.x=113;
     }
     if(g.y>100 && g.y<700 && g.x>=950-g.diam/2-15/2){
       g.x=937;
@@ -77,7 +78,8 @@ class Hole3 {
     if(g.x>100 && g.x<600 && g.y>=300-g.diam/2-15/2 && g.y<=500+g.diam/2+15/2){
       g.yspeed=-g.yspeed;
     }
-   if(g.x<=600+15/2 + g.diam/2 && g.y>300 && g.y<500){
+   if(g.x<= (600+15/2 + g.diam/2) && g.y>300 && g.y<500){
+      g.x=613;
       g.xspeed=-g.xspeed;
     }
   }

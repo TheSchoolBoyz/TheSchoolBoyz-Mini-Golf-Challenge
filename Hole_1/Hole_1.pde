@@ -98,6 +98,7 @@ void draw() {
 
   if (level == 5) {
     Hole5.display();
+    Hole5.checkwalls(golfball);
     golfball.shoot();
     golfball.display();
     if (Hole5.checkhole(golfball)==true) {

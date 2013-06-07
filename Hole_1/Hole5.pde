@@ -54,7 +54,22 @@ class Hole5 {
     fill(255);
   }
   void checkwalls(GolfBall g){
-     if(g.y>100 && g.y<700 && g.x<=100+g.diam/2+15/2){
+     if(g.y>250 && g.y<350 && g.x<=150+g.diam/2+15/2){
+      g.x=163;
+      g.xspeed=-g.xspeed;
+    }
+     if(g.y>250 && g.y<375 && g.x>=(350-g.diam/2-15/2) && g.x<=(650+g.diam/2+15/2)){
+      g.xspeed=-g.xspeed;
+    }
+     if(g.y>350 && g.y<375 && g.x<=300+g.diam/2+15/2){
+      g.x=313;
+      g.xspeed=-g.xspeed;
+    }
+     if(g.y>375 && g.y<475 && g.x>=(400-g.diam/2-15/2) && g.x<=(600+g.diam/2+15/2)){
+      g.xspeed=-g.xspeed;
+    }
+     if(g.y>375 && g.y<475 && g.x<=225+g.diam/2+15/2){
+      g.x=238;
       g.xspeed=-g.xspeed;
     }
   }
