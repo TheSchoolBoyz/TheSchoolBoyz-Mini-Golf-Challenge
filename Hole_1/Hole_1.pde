@@ -110,6 +110,7 @@ void draw() {
 
   if (level == 6) {
     Hole6.display();
+    Hole6.checkwalls(golfball);
     golfball.shoot();
     golfball.display();
     if (Hole6.checkhole(golfball)==true) {
