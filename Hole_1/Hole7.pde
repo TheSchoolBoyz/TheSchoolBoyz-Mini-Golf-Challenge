@@ -34,6 +34,22 @@ class Hole7 {
     }
     fill(255);
   }
+  void checkwalls (GolfBall g) {
+    if (g.x<=200+g.diam/2+15/2 && g.x>200&& g.y>200 && g.y<600) {
+      g.xspeed=-g.xspeed;
+    }
+    if (g.x>=800-g.diam/2-15/2 && g.x<800&& g.y>200 && g.y<600) {
+      g.xspeed=-g.xspeed;
+    }
+
+    if (g.y>=600-g.diam/2-15/2 && g.y<600&& g.x>200 && g.x<800) {
+      g.yspeed=-g.yspeed;
+    }
+    if (g.y<=200+g.diam/2+15/2 && g.y>200&& g.x>200 && g.x<800) {
+      g.yspeed=-g.yspeed;
+    }
+  }
+
 
   boolean checkhole(GolfBall g) {
     if (dist(g.x, g.y, holex, holey)<(g.diam/2+holediam/2)) {

@@ -122,6 +122,7 @@ void draw() {
 
   if (level == 7) {
     Hole7.display(golfball);
+    Hole7.checkwalls(golfball);
     golfball.shoot();
     golfball.display();
     if (Hole7.checkhole(golfball)==true) {
