@@ -53,7 +53,11 @@ class Hole5 {
     ellipse(holex, holey, holediam, holediam);
     fill(255);
   }
-
+  void checkwalls(GolfBall g){
+     if(g.y>100 && g.y<700 && g.x<=100+g.diam/2+15/2){
+      g.xspeed=-g.xspeed;
+    }
+  }
   boolean checkhole(GolfBall g) {
     if (dist(g.x, g.y, holex, holey)<(g.diam/2+holediam/2)) {
       g.x=200;
