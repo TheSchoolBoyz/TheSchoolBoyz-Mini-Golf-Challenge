@@ -11,7 +11,7 @@ Hole7 Hole7;
 Hole8 Hole8;
 Hole9 Hole9;
 boolean redo;
-int par = 3;
+int partotal = Hole1.par + Hole2.par + Hole3.par + Hole4.par + Hole5.par + Hole6.par + Hole7.par + Hole8.par + Hole9.par;
 int level = 0;
 int strokes = 0;
 int strokes2 = 0;
