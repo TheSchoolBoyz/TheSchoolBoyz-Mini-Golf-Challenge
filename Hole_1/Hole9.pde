@@ -3,7 +3,7 @@ class Hole9 {
   float holey;
   float holediam;
   int holescore;
-  int par=1;
+  int par=13;
 
   Hole9() {
     holex=800;
@@ -14,7 +14,10 @@ class Hole9 {
     fill(0);
     fill(37, 134, 44);
     rect(100, 100, 300, 200);
+    rect(600, 100, 300, 200);
     fill(255);
+    rect(100,150,250,100);
+    rect(650,150,250,100);
     strokeWeight(15);
     stroke(90, 54, 26);
     strokeWeight(15);
