@@ -14,8 +14,12 @@ class Hole4 {
     fill(37, 134, 44);
     noStroke();
     rect(100, 500, 800, 100);
-    rect(700,175,200,350);
+    rect(700, 175, 200, 350);
     fill(255);
+    fill (250, 180, 80);
+    rect (600, 500, 100, 100);
+    fill (170, 255, 150);
+    rect (700, 400, 200, 100);
     strokeWeight(15);
     stroke(90, 54, 26);
     line(100, 500, 100, 600);
@@ -48,6 +52,15 @@ class Hole4 {
     }
     if (g.x<=700+g.diam/2+15/2 && g.y>175 && g.y<500) {
       g.xspeed=-g.xspeed;
+    }
+    if (g.x>=700 && g.x<=900 && g.y>=400 && g.y<=500 && g.yspeed<=0) {
+      g.accelerate= 1.25;
+    }
+    else {
+      g.accelerate=.925;
+    }
+    if (g.x>=600 && g.x<=700 && g.y>=500 && g.y<=600) {
+      g.accelerate=.75;
     }
   }
 
