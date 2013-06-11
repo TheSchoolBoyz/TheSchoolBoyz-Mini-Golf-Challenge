@@ -12,7 +12,7 @@ Hole8 Hole8;
 Hole9 Hole9;
 boolean redo;
 int partotal;
-int level = 0;
+int level = 9;
 int strokes = 0;
 int strokes2 = 0;
 void mousePressed() {
@@ -257,7 +257,7 @@ void draw() {
       strokes=strokes-strokes2;
       strokes2=0;
       golfball.x=125;
-      golfball.y=125;
+      golfball.y=175;
       redo=false;
     }
   }
