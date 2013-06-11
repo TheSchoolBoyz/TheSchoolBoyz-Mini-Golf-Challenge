@@ -10,6 +10,7 @@ Hole6 Hole6;
 Hole7 Hole7;
 Hole8 Hole8;
 Hole9 Hole9;
+boolean redo;
 int par = 3;
 int level = 0;
 int strokes = 0;
@@ -44,12 +45,18 @@ void setup() {
   Hole9 = new Hole9();
 }
 void draw() {
+  if(keyPressed){
+    if( key== 'r'){
+    redo=true;
+    }
+  }
+
   background(255);
   if (level == 0) {
     Startscreen.display();
   }
   if (level == 1) {
-    Hole1.display();
+      Hole1.display();
     Hole1.checkwalls(golfball);
     golfball.shoot();
     golfball.display();
@@ -57,6 +64,13 @@ void draw() {
       level++;
       Hole1.holescore = strokes2;
       strokes2 = 0;
+    }
+    if(redo==true){
+      strokes=strokes-strokes2;
+      strokes2=0;
+      golfball.x=200;
+      golfball.y=400;
+      redo=false;
     }
   }
 
@@ -70,6 +84,13 @@ void draw() {
       Hole2.holescore = strokes2;
       strokes2 = 0;
     }
+    if(redo==true){
+      strokes=strokes-strokes2;
+      strokes2=0;
+      golfball.x=200;
+      golfball.y=400;
+      redo=false;
+    }
   }
 
   if (level == 3) {
@@ -81,6 +102,13 @@ void draw() {
       level++;
       Hole3.holescore = strokes2;
       strokes2 = 0;
+    }
+    if(redo==true){
+      strokes=strokes-strokes2;
+      strokes2=0;
+      golfball.x=200;
+      golfball.y=400;
+      redo=false;
     }
   }
 
@@ -94,6 +122,13 @@ void draw() {
       Hole4.holescore = strokes2;
       strokes2 = 0;
     }
+    if(redo==true){
+      strokes=strokes-strokes2;
+      strokes2=0;
+      golfball.x=200;
+      golfball.y=400;
+      redo=false;
+    }
   }
 
   if (level == 5) {
@@ -105,6 +140,13 @@ void draw() {
       level++;
       Hole5.holescore = strokes2;
       strokes2 = 0;
+    }
+    if(redo==true){
+      strokes=strokes-strokes2;
+      strokes2=0;
+      golfball.x=200;
+      golfball.y=400;
+      redo=false;
     }
   }
 
@@ -118,6 +160,13 @@ void draw() {
       Hole6.holescore = strokes2;
       strokes2 = 0;
     }
+    if(redo==true){
+      strokes=strokes-strokes2;
+      strokes2=0;
+      golfball.x=200;
+      golfball.y=400;
+      redo=false;
+    }
   }
 
   if (level == 7) {
@@ -129,6 +178,13 @@ void draw() {
       level++;
       Hole7.holescore = strokes2;
       strokes2 = 0;
+    }
+    if(redo==true){
+      strokes=strokes-strokes2;
+      strokes2=0;
+      golfball.x=200;
+      golfball.y=400;
+      redo=false;
     }
   }
 
@@ -142,6 +198,13 @@ void draw() {
       Hole8.holescore = strokes2;
       strokes2 = 0;
     }
+    if(redo==true){
+      strokes=strokes-strokes2;
+      strokes2=0;
+      golfball.x=200;
+      golfball.y=400;
+      redo=false;
+    }
   }
 
   if (level == 9) {
@@ -152,6 +215,13 @@ void draw() {
       level++;
       Hole9.holescore = strokes2;
       strokes2 = 0;
+    }
+    if(redo==true){
+      strokes=strokes-strokes2;
+      strokes2=0;
+      golfball.x=200;
+      golfball.y=400;
+      redo=false;
     }
   }
 
@@ -185,6 +255,12 @@ void draw() {
   text("Hole # " + level, 600, 50);
   text("Total Score: " + strokes, 50, 50);
   text("Hole Score: " + strokes2, 300, 50);
+  
+  fill(#46DAE0);
+  rect(790,15,175,40);
+  fill(0);
+  textSize(16);
+  text("Press 'r' to redo hole ", 800, 50);
   textSize(1);
   stroke(255);
 }

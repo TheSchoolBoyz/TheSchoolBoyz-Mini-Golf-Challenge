@@ -14,9 +14,11 @@ class Hole3 {
     fill(37, 134, 44);
     rect(100, 100, 850, 600);
     fill(255);
-    rect(100,300,500,200);
-    rect(700,100,300,50);
-    rect(700,650,300,50);
+    rect(100, 300, 500, 200);
+    rect(700, 100, 300, 50);
+    rect(700, 650, 300, 50);
+    fill (250, 180, 80);
+    rect (600, 300, 100, 200);
     fill(255);
     strokeWeight(15);
     stroke(90, 54, 26);
@@ -39,54 +41,60 @@ class Hole3 {
     ellipse(holex, holey, holediam, holediam);
     fill(255);
   }
-  void checkwalls(GolfBall g){
-    if(g.y>100 && g.y<700 && g.x<=100+g.diam/2+15/2){
+  void checkwalls(GolfBall g) {
+    if (g.y>100 && g.y<700 && g.x<=100+g.diam/2+15/2) {
       g.xspeed=-g.xspeed;
       g.x=113;
     }
-    if(g.y>100 && g.y<700 && g.x>=950-g.diam/2-15/2){
+    if (g.y>100 && g.y<700 && g.x>=950-g.diam/2-15/2) {
       g.x=937;
       g.xspeed=-g.xspeed;
     }
-    if(g.x>100 && g.x<900 && g.y<=100+g.diam/2+15/2){
+    if (g.x>100 && g.x<900 && g.y<=100+g.diam/2+15/2) {
       g.yspeed=-g.yspeed;
     }
-    if(g.x>100 && g.x<900 && g.y>=700-g.diam/2-15/2){
+    if (g.x>100 && g.x<900 && g.y>=700-g.diam/2-15/2) {
       g.y=687;
       g.yspeed=-g.yspeed;
     }
-    if(g.y>100 && g.y<150 && g.x>=700-g.diam/2-15/2){
+    if (g.y>100 && g.y<150 && g.x>=700-g.diam/2-15/2) {
       g.xspeed=-g.xspeed;
     }
-    if(g.y>650 && g.y<700 && g.x>=700-g.diam/2-15/2){
+    if (g.y>650 && g.y<700 && g.x>=700-g.diam/2-15/2) {
       g.xspeed=-g.xspeed;
     }
-    if(g.x>700 && g.x<950 && g.y>=650-g.diam/2-15/2){
+    if (g.x>700 && g.x<950 && g.y>=650-g.diam/2-15/2) {
       g.y=637;
       g.yspeed=-g.yspeed;
     }
-    if(g.x>700 && g.x<950 && g.y<=150+g.diam/2+15/2){
+    if (g.x>700 && g.x<950 && g.y<=150+g.diam/2+15/2) {
       g.y=163;
       g.yspeed=-g.yspeed;
     }
-    if(g.x>100 && g.x<600 && g.y>=300-g.diam/2-15/2 && g.y<=500+g.diam/2+15/2){
+    if (g.x>100 && g.x<600 && g.y>=300-g.diam/2-15/2 && g.y<=500+g.diam/2+15/2) {
       g.yspeed=-g.yspeed;
     }
-   if(g.x<= (600+15/2 + g.diam/2) && g.y>300 && g.y<500){
+    if (g.x<= (600+15/2 + g.diam/2) && g.y>300 && g.y<500) {
       g.x=613;
       g.xspeed=-g.xspeed;
     }
-    if(g.x>700 && g.x<750 && g.y>=300-g.diam/2-15/2 && g.y<=300){
+    if (g.x>700 && g.x<750 && g.y>=300-g.diam/2-15/2 && g.y<=300) {
       g.yspeed=-g.yspeed;
     }
-    if(g.x>700 && g.x<750 && g.y<=500+g.diam/2+15/2 && g.y>=500){
+    if (g.x>700 && g.x<750 && g.y<=500+g.diam/2+15/2 && g.y>=500) {
       g.yspeed=-g.yspeed;
     }
-    if(g.y>300 && g.y<500 && g.x<=750+g.diam/2+15/2 && g.x>=750){
+    if (g.y>300 && g.y<500 && g.x<=750+g.diam/2+15/2 && g.x>=750) {
       g.xspeed=-g.xspeed;
     }
-    if(g.y>300 && g.y<500 && g.x>=700-g.diam/2-15/2 && g.x<=700){
+    if (g.y>300 && g.y<500 && g.x>=700-g.diam/2-15/2 && g.x<=700) {
       g.xspeed=-g.xspeed;
+    }
+    if (g.x>=600 && g.x<=700 && g.y>=300 && g.y<=500) {
+      g.accelerate=.75;
+    }
+    else {
+      g.accelerate=.925;
     }
   }
 
