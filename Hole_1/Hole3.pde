@@ -69,17 +69,23 @@ class Hole3 {
       g.y=163;
       g.yspeed=-g.yspeed;
     }
-    if(g.x>700 && g.x<750 && g.y>=300-g.diam/2-15/2 && g.y<=500+g.diam/2+15/2){
-      g.yspeed=-g.yspeed;
-    }
-     if(g.x>=700-g.diam/2 -15/2 && g.x<=750+15/2 + g.diam/2 && g.y>300 && g.y<500){
-      g.xspeed=-g.xspeed;
-    }
     if(g.x>100 && g.x<600 && g.y>=300-g.diam/2-15/2 && g.y<=500+g.diam/2+15/2){
       g.yspeed=-g.yspeed;
     }
    if(g.x<= (600+15/2 + g.diam/2) && g.y>300 && g.y<500){
       g.x=613;
+      g.xspeed=-g.xspeed;
+    }
+    if(g.x>700 && g.x<750 && g.y>=300-g.diam/2-15/2 && g.y<=300){
+      g.yspeed=-g.yspeed;
+    }
+    if(g.x>700 && g.x<750 && g.y<=500+g.diam/2+15/2 && g.y>=500){
+      g.yspeed=-g.yspeed;
+    }
+    if(g.y>300 && g.y<500 && g.x<=750+g.diam/2+15/2 && g.x>=750){
+      g.xspeed=-g.xspeed;
+    }
+    if(g.y>300 && g.y<500 && g.x>=700-g.diam/2-15/2 && g.x<=700){
       g.xspeed=-g.xspeed;
     }
   }

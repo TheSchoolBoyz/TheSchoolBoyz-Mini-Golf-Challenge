@@ -96,8 +96,30 @@ class Hole5 {
       g.y=263;
       g.yspeed=-g.yspeed;
     }
-    if (g.x>650 && g.x<350 && g.y<=850+g.diam/2+15/2) {
+    if (g.x>650 && g.x<850 && g.y<=250+g.diam/2+15/2) {
       g.y=263;
+      g.yspeed=-g.yspeed;
+    }
+    if (g.x>150 && g.x<300 && g.y>=350-g.diam/2-15/2 && g.y<=375+15/2+g.diam/2) {
+      g.yspeed=-g.yspeed;
+    }
+    if (g.x>700 && g.x<850 && g.y>=350-g.diam/2-15/2 && g.y<=375+15/2+g.diam/2) {
+      g.yspeed=-g.yspeed;
+    }
+    if (g.x>400 && g.x<600 && g.y<=475+g.diam/2+15/2) {
+      g.y=488;
+      g.yspeed=-g.yspeed;
+    }
+    if (g.x>350 && g.x<400 && g.y<=375+g.diam/2+15/2) {
+      g.y=388;
+      g.yspeed=-g.yspeed;
+    }
+    if (g.x>600 && g.x<650 && g.y<=375+g.diam/2+15/2) {
+      g.y=388;
+      g.yspeed=-g.yspeed;
+    }
+    if (g.x>300 && g.x<700 && g.y>=600-g.diam/2-15/2) {
+      g.y=587;
       g.yspeed=-g.yspeed;
     }
   }
