@@ -70,7 +70,63 @@ class Hole9 {
     ellipse(holex, holey, holediam, holediam);
     fill(255);
   }
-
+  void checkwalls (GolfBall g) {
+    if(g.x<=100+15/2+g.diam/2){
+      g.x=113;
+      g.xspeed=-g.xspeed;
+    }
+    if(g.y>200 && g.y<300 && g.x<=350+15/2+g.diam/2){
+      g.x=363;
+      g.xspeed=-g.xspeed;
+    }
+    if(g.y>150 && g.y<350 && g.x>=400-15/2-g.diam/2 && g.x<425){
+      g.x=387;
+      g.xspeed=-g.xspeed;
+    }
+    if(g.y>100 && g.y<475 && g.x<=475+15/2+g.diam/2 && g.x>425){
+      g.x=498;
+      g.xspeed=-g.xspeed;
+    }
+    if(g.y>350 && g.y<750 && g.x>=150-15/2-g.diam/2 && g.x<163){
+      g.x=137;
+      g.xspeed=-g.xspeed;
+    }
+    if(g.y>350 && g.y<750 && g.x<=175+15/2+g.diam/2 && g.x>163){
+      g.x=198;
+      g.xspeed=-g.xspeed;
+    }
+    if(g.x>=900-15/2-g.diam/2){
+      g.x=887;
+      g.xspeed=-g.xspeed;
+    }
+    if(g.y>200 && g.y<300 && g.x>=650-15/2-g.diam/2){
+      g.x=637;
+      g.xspeed=-g.xspeed;
+    }
+    if(g.y>150 && g.y<350 && g.x<=600+15/2+g.diam/2 && g.x>575){
+      g.x=613;
+      g.xspeed=-g.xspeed;
+    }
+    if(g.y>125 && g.y<475 && g.x>=525-15/2-g.diam/2 && g.x<575){
+      g.x=512;
+      g.xspeed=-g.xspeed;
+    }
+    if(g.y>350 && g.y<750 && g.x<=850+15/2+g.diam/2 && g.x>837){
+      g.x=863;
+      g.xspeed=-g.xspeed;
+    }
+    if(g.y>350 && g.y<750 && g.x>=825-15/2-g.diam/2 && g.x<837){
+      g.x=812;
+      g.xspeed=-g.xspeed;
+    }
+    
+    
+    
+    if (g.x>100 && g.x<400 && g.y<=150+g.diam/2+15/2) {
+      g.y=163;
+      g.yspeed=-g.yspeed;
+    }
+  }
   boolean checkhole(GolfBall g) {
     if (dist(g.x, g.y, holex, holey)<(g.diam/2+holediam/2)) {
       g.x=200;

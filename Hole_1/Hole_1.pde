@@ -13,7 +13,7 @@ Hole9 Hole9;
 PImage bluebackground;
 boolean redo;
 int partotal;
-int level = 0;
+int level = 9;
 int strokes = 0;
 int strokes2 = 0;
 void mousePressed() {
@@ -247,6 +247,7 @@ void draw() {
 
   if (level == 9) {
     Hole9.display();
+    Hole9.checkwalls(golfball);
     golfball.shoot();
     golfball.display();
     textSize(30);
