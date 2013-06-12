@@ -1,12 +1,12 @@
 class Endscreen {
+  PImage eagle; 
 
   Endscreen() {
+    eagle= loadImage ("eagle1.png");
   }
   void display() {
-    noStroke();
-    fill(#41B252);
-    rect(0,0,width,height);
-    strokeWeight(15);
+    background(eagle);
+
     fill(#DECE3F);
     noStroke();
     rect(100,450,775,300);
