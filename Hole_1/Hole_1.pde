@@ -13,7 +13,7 @@ Hole9 Hole9;
 PImage b;
 boolean redo;
 int partotal;
-int level = 0;
+int level = 8;
 int strokes = 0;
 int strokes2 = 0;
 void mousePressed() {
