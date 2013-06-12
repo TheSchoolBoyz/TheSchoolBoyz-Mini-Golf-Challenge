@@ -45,49 +45,55 @@ class Hole6 {
     fill(255);
   }
   void checkwalls (GolfBall g) {
-    if (g.x<=150+g.diam/2+15/2 && g.x>150&& g.y>250 && g.y<500) {
+    if (g.x<=150+g.diam/2+15/2 && g.y>250 && g.y<500) {
+      g.x=163;
       g.xspeed=-g.xspeed;
     }
-    if (g.x>=250-g.diam/2-15/2 && g.x<250 && g.y>250 && g.y<450) {
+    if (g.x<750+g.diam/2+15/2 && g.x>=250-g.diam/2-15/2 && g.y>250 && g.y<450) {
       g.xspeed=-g.xspeed;
     }
-    if (g.x<=350+g.diam/2+15/2 && g.x>350&& g.y>500 && g.y<650) {
+    if(g.x>150 && g.x<250 && g.y<=250+g.diam/2+15/2){
+      g.y=263;
+      g.yspeed=-g.yspeed;
+    }
+    if(g.x>150 && g.x<350 && g.y>=500-g.diam/2-15/2){
+      g.y=487;
+      g.yspeed=-g.yspeed;
+    }
+    if(g.x>250 && g.x<700 && g.y<=450+g.diam/2+15/2){
+      g.y=463;
+      g.yspeed=-g.yspeed;
+    }  
+    if (g.x<750+g.diam/2+15/2 && g.x>=700-g.diam/2-15/2 && g.y>450 && g.y<500) {
       g.xspeed=-g.xspeed;
     }
-    if (g.x>=700-g.diam/2-15/2 && g.x<700 && g.y>450 && g.y<500) {
+    if (g.x<750&& g.x>=700 && g.y<=500+g.diam/2+15/2) {
+      g.yspeed=-g.yspeed;
+    }
+    if (g.x<=350+g.diam/2+15/2 && g.y>500 && g.y<700) {
+      g.x=363;
       g.xspeed=-g.xspeed;
     }
-    if (g.x>=750-g.diam/2-15/2 && g.x <750 && g.y>575 && g.y<650) {
+    if (g.x>=850-g.diam/2-15/2 && g.y>250 && g.y<600) {
+      g.x=837;
       g.xspeed=-g.xspeed;
     }
-    if (g.x>=850-g.diam/2-15/2 && g.x<850 && g.y>300 && g.y<575) {
+    if(g.x>750 && g.x<850 && g.y<=300+g.diam/2+15/2){
+      g.y=313;
+      g.yspeed=-g.yspeed;
+    }
+    if(g.x>350 && g.x<750 && g.y>=650-g.diam/2-15/2){
+      g.y=637;
+      g.yspeed=-g.yspeed;
+    }
+    if(g.x>750 && g.x<850 && g.y>=575-g.diam/2-15/2){
+      g.y=562;
+      g.yspeed=-g.yspeed;
+    }
+    if (g.x>=750-g.diam/2-15/2 && g.y>575 && g.y<750) {
+      g.x=737;
       g.xspeed=-g.xspeed;
-    }
-    if (g.x<=750+g.diam/2+15/2 && g.x>750&& g.y>300 && g.y<500) {
-      g.xspeed=-g.xspeed;
-    }
-
-    if (g.y<=250+g.diam/2+15/2 && g.y>250&& g.x>150 && g.x<250) {
-      g.yspeed=-g.yspeed;
-    }
-    if (g.y<=300+g.diam/2+15/2 && g.y>300&& g.x>750 && g.x<850) {
-      g.yspeed=-g.yspeed;
-    }
-    if (g.y<=450+g.diam/2+15/2 && g.y>450&& g.x>250 && g.x<700) {
-      g.yspeed=-g.yspeed;
-    }
-    if (g.y<=500+g.diam/2+15/2 && g.y>500&& g.x>700 && g.x<750) {
-      g.yspeed=-g.yspeed;
-    }
-    if (g.y>=500-g.diam/2-15/2 && g.y<500&& g.x>150 && g.x<350) {
-      g.yspeed=-g.yspeed;
-    }
-    if (g.y>=575-g.diam/2-15/2 && g.y<575&& g.x>750 && g.x<850) {
-      g.yspeed=-g.yspeed;
-    }
-    if (g.y>=650-g.diam/2-15/2 && g.y<650&& g.x>350 && g.x<750) {
-      g.yspeed=-g.yspeed;
-    }
+    }    
   }
 
 
