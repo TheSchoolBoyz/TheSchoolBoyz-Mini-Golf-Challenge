@@ -10,10 +10,10 @@ Hole6 Hole6;
 Hole7 Hole7;
 Hole8 Hole8;
 Hole9 Hole9;
-PImage b;
+PImage bluebackground;
 boolean redo;
 int partotal;
-int level = 8;
+int level = 0;
 int strokes = 0;
 int strokes2 = 0;
 void mousePressed() {
@@ -44,7 +44,7 @@ void setup() {
   Hole7 = new Hole7();
   Hole8 = new Hole8();
   Hole9 = new Hole9();
-  b = loadImage("blue1.png");
+  bluebackground = loadImage("blue1.png");
   partotal = Hole1.par + Hole2.par + Hole3.par + Hole4.par + Hole5.par + Hole6.par + Hole7.par + Hole8.par + Hole9.par;
 }
 void draw() {
@@ -59,7 +59,7 @@ void draw() {
     Startscreen.display();
   }
   if(level>=1 && level<=9){
-    background(b);
+    background(bluebackground);
   }
   if (level == 1) {
       Hole1.display();
