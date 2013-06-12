@@ -13,7 +13,7 @@ Hole9 Hole9;
 PImage bluebackground;
 boolean redo;
 int partotal;
-int level = 9;
+int level = 0;
 int strokes = 0;
 int strokes2 = 0;
 void mousePressed() {
@@ -45,7 +45,7 @@ void setup() {
   Hole8 = new Hole8();
   Hole9 = new Hole9();
   bluebackground = loadImage("blue1.png");
-  partotal = Hole1.par + Hole2.par + Hole3.par + Hole4.par + Hole5.par + Hole6.par + Hole7.par + Hole8.par + Hole9.par;
+  partotal = Hole1.par + Hole2.par + Hole3.par+ Hole4.par + Hole5.par + Hole6.par+ Hole7.par + Hole8.par + Hole9.par;
 }
 void draw() {
   if(keyPressed){
@@ -270,10 +270,10 @@ void draw() {
   if (level == 10) {
     textSize(100);
     Endscreen.display();
-    stop();
+    fill(255);
     text("You Win!!", 250, 200);
     textSize(50);
-    text("Your Score is: ",275,400);
+    text("Your Score is: ",250,400);
     if(strokes<partotal){
       fill(#29ED30);
       text(strokes  + " ("  +(strokes-partotal) +")", 625, 400);
@@ -287,9 +287,31 @@ void draw() {
       text(strokes + " (+" + (strokes-partotal) + ")", 625, 400);
     }
     fill(0);
-    text("Hole     1  2  3  4  5  6  7  8  9", 125, 500);
-    text("Par       " + Hole1.par + "  " + Hole2.par+ "  " + Hole3.par+ "  " + Hole4.par+ "  " + Hole5.par+ "  " + Hole6.par+ "  " + Hole7.par+ "  " + Hole8.par+ "  " + Hole9.par, 125, 620);
-    text("Score   " + Hole1.holescore + "  " + Hole2.holescore + "  " + Hole3.holescore + "  " + Hole4.holescore + "  " + Hole5.holescore + "  " + Hole6.holescore + "  " + Hole7.holescore + "  " + Hole8.holescore + "  " +Hole9.holescore, 125, 700);
+    int spacing = (875-300)/9;
+    text("Hole", 125, 520);
+      for(int j=0;j<9;j++){
+        text(1 +j,315 + spacing*j,520);
+      }
+    text("Par", 125, 620);
+       text(Hole1.par,315 + spacing*0,620);
+       text(Hole2.par,315 + spacing*1,620);
+       text(Hole3.par,315 + spacing*2,620);
+       text(Hole4.par,315 + spacing*3,620);
+       text(Hole5.par,315 + spacing*4,620);
+       text(Hole6.par,315 + spacing*5,620);
+       text(Hole7.par,315 + spacing*6,620);
+       text(Hole8.par,315 + spacing*7,620);
+       text(Hole9.par,315 + spacing*8,620);
+    text("Score", 125, 720);
+       text(Hole1.holescore,315 + spacing*0,720);
+       text(Hole2.holescore,315 + spacing*1,720);
+       text(Hole3.holescore,315 + spacing*2,720);
+       text(Hole4.holescore,315 + spacing*3,720);
+       text(Hole5.holescore,315 + spacing*4,720);
+       text(Hole6.holescore,315 + spacing*5,720);
+       text(Hole7.holescore,315 + spacing*6,720);
+       text(Hole8.holescore,315 + spacing*7,720);
+       text(Hole9.holescore,315 + spacing*8,720);
     textSize(0);
   }
   if(level>=1 && level<=9){
@@ -315,3 +337,5 @@ void mouseReleased () {
   golfball.xspeed=px;
   golfball.yspeed=py;
 }
+
+
