@@ -10,9 +10,10 @@ Hole6 Hole6;
 Hole7 Hole7;
 Hole8 Hole8;
 Hole9 Hole9;
+PImage b;
 boolean redo;
 int partotal;
-int level = 6;
+int level = 0;
 int strokes = 0;
 int strokes2 = 0;
 void mousePressed() {
@@ -43,6 +44,7 @@ void setup() {
   Hole7 = new Hole7();
   Hole8 = new Hole8();
   Hole9 = new Hole9();
+  b = loadImage("blue1.png");
   partotal = Hole1.par + Hole2.par + Hole3.par + Hole4.par + Hole5.par + Hole6.par + Hole7.par + Hole8.par + Hole9.par;
 }
 void draw() {
@@ -55,6 +57,9 @@ void draw() {
   background(255);
   if (level == 0) {
     Startscreen.display();
+  }
+  if(level>=1 && level<=9){
+    background(b);
   }
   if (level == 1) {
       Hole1.display();
@@ -288,7 +293,7 @@ void draw() {
     textSize(0);
   }
   textSize(30);
-  fill(0);
+  fill(255);
   text("Hole # " + level, 525, 50);
   text("Total Score: " + strokes, 50, 50);
   text("Hole Score: " + strokes2, 300, 50);
