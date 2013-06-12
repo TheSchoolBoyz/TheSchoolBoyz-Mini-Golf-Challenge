@@ -84,7 +84,7 @@ class Hole9 {
       g.xspeed=-g.xspeed;
     }
     if(g.y>100 && g.y<475 && g.x<=475+15/2+g.diam/2 && g.x>425){
-      g.x=498;
+      g.x=488;
       g.xspeed=-g.xspeed;
     }
     if(g.y>350 && g.y<750 && g.x>=150-15/2-g.diam/2 && g.x<163){
@@ -119,9 +119,23 @@ class Hole9 {
       g.x=812;
       g.xspeed=-g.xspeed;
     }
+    if(g.y>125 && g.y<150 && g.x<=850+g.diam/2+15/2 && g.x>700){
+      g.x=863;
+      g.xspeed=-g.xspeed;
+    }  
     
-    
-    
+    if(g.y<=100+g.diam/2+15/2){
+      g.y=112;
+      g.yspeed=-g.yspeed;
+    }
+    if(g.x>525 && g.x<850 && g.y>125-g.diam/2-15/2 && g.y<137){
+      g.y=113;
+      g.yspeed=-g.yspeed;
+    }
+    if(g.x>525 && g.x<850 && g.y<=150+g.diam/2+15/2 && g.y>137){
+      g.y=163;
+      g.yspeed=-g.yspeed;
+    }
     if (g.x>100 && g.x<400 && g.y<=150+g.diam/2+15/2) {
       g.y=163;
       g.yspeed=-g.yspeed;
