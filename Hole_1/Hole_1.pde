@@ -13,7 +13,7 @@ Hole9 Hole9;
 PImage bluebackground;
 boolean redo;
 int partotal;
-int level = 0;
+int level = 8;
 int strokes = 0;
 int strokes2 = 0;
 void mousePressed() {
@@ -292,7 +292,8 @@ void draw() {
     text("Score   " + Hole1.holescore + "  " + Hole2.holescore + "  " + Hole3.holescore + "  " + Hole4.holescore + "  " + Hole5.holescore + "  " + Hole6.holescore + "  " + Hole7.holescore + "  " + Hole8.holescore + "  " +Hole9.holescore, 125, 700);
     textSize(0);
   }
-  textSize(30);
+  if(level>=1 && level<=9){
+    textSize(30);
   fill(255);
   text("Hole # " + level, 525, 50);
   text("Total Score: " + strokes, 50, 50);
@@ -305,6 +306,7 @@ void draw() {
   text("Press 'r' to redo hole ", 800, 50);
   textSize(1);
   stroke(255);
+  }
 }
 
 void mouseReleased () {
