@@ -20,7 +20,7 @@ class GolfBall {
 
   void shoot() {
     strokeWeight(5);
-    stroke(200, 100, 100, 150);
+    stroke(200, 100, 100, 151);
     line(x, y, mouseX, mouseY);
     stroke(0);
     strokeWeight(1);
