@@ -10,16 +10,26 @@ Hole6 Hole6;
 Hole7 Hole7;
 Hole8 Hole8;
 Hole9 Hole9;
+
 PImage bluebackground;
 boolean redo;
 int partotal;
-int level = 9;
+int level = 0;
 int strokes = 0;
 int strokes2 = 0;
+
 void mousePressed() {
   strokes++;
   strokes2++;
 }
+
+void mouseReleased () {
+  float px = (golfball.x-mouseX)*.25;
+  float py= (golfball.y-mouseY)*.25;
+  golfball.xspeed=px;
+  golfball.yspeed=py;
+}
+
 void keyPressed() {
   if (key=='b') {
     if (Startscreen.begin()==true) {
@@ -48,21 +58,34 @@ void setup() {
   partotal = Hole1.par + Hole2.par + Hole3.par+ Hole4.par + Hole5.par + Hole6.par+ Hole7.par + Hole8.par + Hole9.par;
 }
 void draw() {
-  if(keyPressed){
-    if( key== 'r'){
-    redo=true;
+  if (keyPressed) {
+    if ( key== 'r') {
+      redo=true;
     }
   }
-
-  background(255);
+  
   if (level == 0) {
     Startscreen.display();
   }
-  if(level>=1 && level<=9){
+  
+  if (level>=1 && level<=9) {
     background(bluebackground);
+    textSize(30);
+    fill(255);
+    text("Hole # " + level, 525, 50);
+    text("Total Score: " + strokes, 50, 50);
+    text("Hole Score: " + strokes2, 300, 50);
+    noStroke();
+    fill(#46DAE0, 100);
+    rect(790, 15, 175, 40);
+    fill(0);
+    textSize(16);
+    text("Press 'r' to redo hole ", 800, 45);
+    textSize(1);
+    stroke(255);
   }
   if (level == 1) {
-      Hole1.display();
+    Hole1.display();
     Hole1.checkwalls(golfball);
     golfball.shoot();
     golfball.display();
@@ -75,7 +98,7 @@ void draw() {
       Hole1.holescore = strokes2;
       strokes2 = 0;
     }
-    if(redo==true){
+    if (redo==true) {
       strokes=strokes-strokes2;
       strokes2=0;
       golfball.x=200;
@@ -98,7 +121,7 @@ void draw() {
       Hole2.holescore = strokes2;
       strokes2 = 0;
     }
-    if(redo==true){
+    if (redo==true) {
       strokes=strokes-strokes2;
       strokes2=0;
       golfball.x=200;
@@ -121,7 +144,7 @@ void draw() {
       Hole3.holescore = strokes2;
       strokes2 = 0;
     }
-    if(redo==true){
+    if (redo==true) {
       strokes=strokes-strokes2;
       strokes2=0;
       golfball.x=200;
@@ -144,7 +167,7 @@ void draw() {
       Hole4.holescore = strokes2;
       strokes2 = 0;
     }
-    if(redo==true){
+    if (redo==true) {
       strokes=strokes-strokes2;
       strokes2=0;
       golfball.x=200;
@@ -167,7 +190,7 @@ void draw() {
       Hole5.holescore = strokes2;
       strokes2 = 0;
     }
-    if(redo==true){
+    if (redo==true) {
       strokes=strokes-strokes2;
       strokes2=0;
       golfball.x=200;
@@ -190,7 +213,7 @@ void draw() {
       Hole6.holescore = strokes2;
       strokes2 = 0;
     }
-    if(redo==true){
+    if (redo==true) {
       strokes=strokes-strokes2;
       strokes2=0;
       golfball.x=200;
@@ -213,7 +236,7 @@ void draw() {
       Hole7.holescore = strokes2;
       strokes2 = 0;
     }
-    if(redo==true){
+    if (redo==true) {
       strokes=strokes-strokes2;
       strokes2=0;
       golfball.x=300;
@@ -236,7 +259,7 @@ void draw() {
       Hole8.holescore = strokes2;
       strokes2 = 0;
     }
-    if(redo==true){
+    if (redo==true) {
       strokes=strokes-strokes2;
       strokes2=0;
       golfball.x=200;
@@ -259,7 +282,7 @@ void draw() {
       Hole9.holescore = strokes2;
       strokes2 = 0;
     }
-    if(redo==true){
+    if (redo==true) {
       strokes=strokes-strokes2;
       strokes2=0;
       golfball.x=125;
@@ -274,17 +297,17 @@ void draw() {
     fill(255);
     text("You Win!!", 500, 120);
     textSize(40);
-    text("Your Score is: ",500,200);
-    if(strokes<partotal){
+    text("Your Score is: ", 500, 200);
+    if (strokes<partotal) {
       fill(#29ED30);
       text(strokes  + " ("  +(strokes-partotal) +")", 775, 200);
     }
-    if(strokes==partotal){
+    if (strokes==partotal) {
       fill(0);
-      text(strokes + " (0)", 625,400);
+      text(strokes + " (0)", 625, 400);
     }
-    if(strokes>partotal){
-      fill(255,0,0);
+    if (strokes>partotal) {
+      fill(255, 0, 0);
       text(strokes + " (+" + (strokes-partotal) + ")", 625, 400);
     }
     fill(0);
@@ -292,55 +315,31 @@ void draw() {
     int spacing = (875-300)/9;
     fill(#35B43E);
     text("Hole", 125, 520);
-      for(int j=0;j<9;j++){
-        text(1 +j,315 + spacing*j,520);
-      }
+    for (int j=0;j<9;j++) {
+      text(1 +j, 315 + spacing*j, 520);
+    }
     fill(0);
     text("Par", 125, 620);
-       text(Hole1.par,315 + spacing*0,620);
-       text(Hole2.par,315 + spacing*1,620);
-       text(Hole3.par,315 + spacing*2,620);
-       text(Hole4.par,315 + spacing*3,620);
-       text(Hole5.par,315 + spacing*4,620);
-       text(Hole6.par,315 + spacing*5,620);
-       text(Hole7.par,315 + spacing*6,620);
-       text(Hole8.par,315 + spacing*7,620);
-       text(Hole9.par,315 + spacing*8,620);
+    text(Hole1.par, 315 + spacing*0, 620);
+    text(Hole2.par, 315 + spacing*1, 620);
+    text(Hole3.par, 315 + spacing*2, 620);
+    text(Hole4.par, 315 + spacing*3, 620);
+    text(Hole5.par, 315 + spacing*4, 620);
+    text(Hole6.par, 315 + spacing*5, 620);
+    text(Hole7.par, 315 + spacing*6, 620);
+    text(Hole8.par, 315 + spacing*7, 620);
+    text(Hole9.par, 315 + spacing*8, 620);
     fill(0);
     text("Score", 125, 720);
-       text(Hole1.holescore,315 + spacing*0,720);
-       text(Hole2.holescore,315 + spacing*1,720);
-       text(Hole3.holescore,315 + spacing*2,720);
-       text(Hole4.holescore,315 + spacing*3,720);
-       text(Hole5.holescore,315 + spacing*4,720);
-       text(Hole6.holescore,315 + spacing*5,720);
-       text(Hole7.holescore,315 + spacing*6,720);
-       text(Hole8.holescore,315 + spacing*7,720);
-       text(Hole9.holescore,315 + spacing*8,720);
+    text(Hole1.holescore, 315 + spacing*0, 720);
+    text(Hole2.holescore, 315 + spacing*1, 720);
+    text(Hole3.holescore, 315 + spacing*2, 720);
+    text(Hole4.holescore, 315 + spacing*3, 720);
+    text(Hole5.holescore, 315 + spacing*4, 720);
+    text(Hole6.holescore, 315 + spacing*5, 720);
+    text(Hole7.holescore, 315 + spacing*6, 720);
+    text(Hole8.holescore, 315 + spacing*7, 720);
+    text(Hole9.holescore, 315 + spacing*8, 720);
     textSize(0);
   }
-  if(level>=1 && level<=9){
-    textSize(30);
-  fill(255);
-  text("Hole # " + level, 525, 50);
-  text("Total Score: " + strokes, 50, 50);
-  text("Hole Score: " + strokes2, 300, 50);
-  noStroke();
-  fill(#46DAE0,100);
-  rect(790,15,175,40);
-  fill(0);
-  textSize(16);
-  text("Press 'r' to redo hole ", 800, 45);
-  textSize(1);
-  stroke(255);
-  }
 }
-
-void mouseReleased () {
-  float px = (golfball.x-mouseX)*.25;
-  float py= (golfball.y-mouseY)*.25;
-  golfball.xspeed=px;
-  golfball.yspeed=py;
-}
-
-
