@@ -3,7 +3,7 @@ class Hole9 {
   float holey;
   float holediam;
   int holescore;
-  int par=3;
+  int par=15;
 
   Hole9() {
     holex=800;
@@ -163,7 +163,27 @@ class Hole9 {
     if (g.x>600 && g.x<850 && g.y>=350-g.diam/2-15/2 && g.y<400) {
       g.y=337;
       g.yspeed=-g.yspeed;
+    }    
+    if(g.y>800-15/2-g.diam/2){
+      g.y=787;
+      g.yspeed=-g.yspeed;
     }
+    if (g.x>150 && g.x<850 && g.y<=750+g.diam/2+15/2 && g.y>737) {
+      g.y=767;
+      g.yspeed=-g.yspeed;
+    }
+    if (g.x>175 && g.x<825 && g.y>=725-g.diam/2-15/2 && g.y<737) {
+      g.y=713;
+      g.yspeed=-g.yspeed;
+    }
+    if (g.x>175 && g.x<475 && g.y<=475+g.diam/2+15/2 && g.y>400) {
+      g.y=488;
+      g.yspeed=-g.yspeed;
+    }
+    if (g.x>525 && g.x<825 && g.y<=475+g.diam/2+15/2 && g.y>400) {
+      g.y=488;
+      g.yspeed=-g.yspeed;
+    }     
   }
   boolean checkhole(GolfBall g) {
     if (dist(g.x, g.y, holex, holey)<(g.diam/2+holediam/2)) {

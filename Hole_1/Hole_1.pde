@@ -14,7 +14,7 @@ Hole9 Hole9;
 PImage bluebackground;
 boolean redo;
 int partotal;
-int level = 0;
+int level = 9;
 int strokes = 0;
 int strokes2 = 0;
 
@@ -304,11 +304,11 @@ void draw() {
     }
     if (strokes==partotal) {
       fill(0);
-      text(strokes + " (0)", 625, 400);
+      text(strokes + " (0)", 775, 200);
     }
     if (strokes>partotal) {
       fill(255, 0, 0);
-      text(strokes + " (+" + (strokes-partotal) + ")", 625, 400);
+      text(strokes + " (+" + (strokes-partotal) + ")", 775, 200);
     }
     fill(0);
     textSize(50);
