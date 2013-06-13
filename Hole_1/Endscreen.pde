@@ -7,11 +7,11 @@ class Endscreen {
   void display() {
     background(eagle);
 
-    fill(#DECE3F,175);
+    fill(255,200);
     noStroke();
     rect(100,450,767,300);
-    strokeWeight(5);
-    stroke(90,54,26,175);
+    strokeWeight(10);
+    stroke(#166C1C,255);
     line(100,450,867,450);
     line(100,750,867,750);
     line(100,450,100,750);

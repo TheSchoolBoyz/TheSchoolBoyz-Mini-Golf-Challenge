@@ -13,7 +13,7 @@ Hole9 Hole9;
 PImage bluebackground;
 boolean redo;
 int partotal;
-int level = 9;
+int level = 10;
 int strokes = 0;
 int strokes2 = 0;
 void mousePressed() {
@@ -272,12 +272,12 @@ void draw() {
     textSize(100);
     Endscreen.display();
     fill(255);
-    text("You Win!!", 250, 200);
-    textSize(50);
-    text("Your Score is: ",250,400);
+    text("You Win!!", 500, 120);
+    textSize(40);
+    text("Your Score is: ",500,200);
     if(strokes<partotal){
       fill(#29ED30);
-      text(strokes  + " ("  +(strokes-partotal) +")", 625, 400);
+      text(strokes  + " ("  +(strokes-partotal) +")", 775, 200);
     }
     if(strokes==partotal){
       fill(0);
@@ -288,11 +288,14 @@ void draw() {
       text(strokes + " (+" + (strokes-partotal) + ")", 625, 400);
     }
     fill(0);
+    textSize(50);
     int spacing = (875-300)/9;
+    fill(#35B43E);
     text("Hole", 125, 520);
       for(int j=0;j<9;j++){
         text(1 +j,315 + spacing*j,520);
       }
+    fill(0);
     text("Par", 125, 620);
        text(Hole1.par,315 + spacing*0,620);
        text(Hole2.par,315 + spacing*1,620);
@@ -303,6 +306,7 @@ void draw() {
        text(Hole7.par,315 + spacing*6,620);
        text(Hole8.par,315 + spacing*7,620);
        text(Hole9.par,315 + spacing*8,620);
+    fill(0);
     text("Score", 125, 720);
        text(Hole1.holescore,315 + spacing*0,720);
        text(Hole2.holescore,315 + spacing*1,720);
