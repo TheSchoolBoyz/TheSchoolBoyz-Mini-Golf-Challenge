@@ -140,6 +140,30 @@ class Hole9 {
       g.y=163;
       g.yspeed=-g.yspeed;
     }
+    if (g.x>100 && g.x<350 && g.y>=200-g.diam/2-15/2 && g.y<250) {
+      g.y=187;
+      g.yspeed=-g.yspeed;
+    }
+    if (g.x>100 && g.x<350 && g.y<=300+g.diam/2+15/2 && g.y>250) {
+      g.y=313;
+      g.yspeed=-g.yspeed;
+    }
+    if (g.x>150 && g.x<400 && g.y>=350-g.diam/2-15/2 && g.y<400) {
+      g.y=337;
+      g.yspeed=-g.yspeed;
+    }
+    if (g.x>650 && g.x<900 && g.y>=200-g.diam/2-15/2 && g.y<250) {
+      g.y=187;
+      g.yspeed=-g.yspeed;
+    }
+    if (g.x>650 && g.x<900 && g.y<=300+g.diam/2+15/2 && g.y>250) {
+      g.y=313;
+      g.yspeed=-g.yspeed;
+    }
+    if (g.x>600 && g.x<850 && g.y>=350-g.diam/2-15/2 && g.y<400) {
+      g.y=337;
+      g.yspeed=-g.yspeed;
+    }
   }
   boolean checkhole(GolfBall g) {
     if (dist(g.x, g.y, holex, holey)<(g.diam/2+holediam/2)) {

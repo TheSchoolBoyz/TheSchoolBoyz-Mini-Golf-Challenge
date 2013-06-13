@@ -13,7 +13,7 @@ Hole9 Hole9;
 PImage bluebackground;
 boolean redo;
 int partotal;
-int level = 10;
+int level = 9;
 int strokes = 0;
 int strokes2 = 0;
 void mousePressed() {
@@ -325,12 +325,12 @@ void draw() {
   text("Hole # " + level, 525, 50);
   text("Total Score: " + strokes, 50, 50);
   text("Hole Score: " + strokes2, 300, 50);
-  
-  fill(#46DAE0);
+  noStroke();
+  fill(#46DAE0,100);
   rect(790,15,175,40);
   fill(0);
   textSize(16);
-  text("Press 'r' to redo hole ", 800, 50);
+  text("Press 'r' to redo hole ", 800, 45);
   textSize(1);
   stroke(255);
   }
