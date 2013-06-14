@@ -5,7 +5,7 @@ Intro to Programming 1/2 A
 
                                Tech Summary - The School Boyz Mini Golf Challenge
 
-First of all i hope it is ok that this is a .txt file not a Word document, sorry about that.
+      First of all i hope it is ok that this is a .txt file not a Word document, sorry about that.
 
       For our game, I had the role of "code-monkey", meaning that i was the main person doing the code. When all is said,
 and done, I believe i fulfilled this role to the best of my ability. Matt and I were the only people who worked on
@@ -13,6 +13,12 @@ the main code. Aside from the things that Matt mentioned in his personal stateme
 code. This includes the entire structure of the code, the Start and End Creen, many of the checkwalls() functions,
 and the main Hole_1 file where all of the Hole classes' methods are called.
 
-I put in a lot of effort and time into this project, and in the end I am happy with the result. I probably put in 
+      I put in a lot of effort and time into this project, and in the end I am happy with the result. I probably put in 
 more time than anyone else, but i dont really mind, as i was the "code-monkey" and everyone on the team still helped
-out
+out. Overall, i think we worked well as a team, with me doing the code, Matt helping out with code and Nirav and Tyler
+checking for bugs and creating the hole designs. 
+
+      If there was one thing i would change, I would find a to close our "bug #1", which the fact that the ball 
+occasionally goes through the wall. Other than that one bug, i think our final prduct is a good one, and clearly 
+the result of hard work by all of the team members. I feel that i was a good team member and i fulfilled my role
+of "code monkey".
