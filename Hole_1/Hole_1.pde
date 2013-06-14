@@ -14,7 +14,7 @@ Hole9 Hole9;
 PImage bluebackground;
 boolean redo;
 int partotal;
-int level = 9;
+int level = 0;
 int strokes = 0;
 int strokes2 = 0;
 
